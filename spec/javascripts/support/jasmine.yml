@@ -11,7 +11,7 @@
 #   - dist/**/*.js
 #
 src_files:
-  - spec/javascripts/helpers/google_maps_helper.js
+  - spec/javascripts/helpers/GoogleMapsHelper.js
   - public/javascripts/**/*.js
 
 # stylesheets
@@ -111,7 +111,7 @@ boot_dir:
 #   - '**/*.js'
 #
 boot_files:
-#  - 'boot_google_maps.js'
+#  - 'bootGoogleMaps.js'
 
 # rack_options
 #

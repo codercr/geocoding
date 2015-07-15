@@ -2,8 +2,52 @@
 <html>
 <head>
     <title>Geocoding</title>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&libraries=geometry&v=3.exp"></script>
+    <script src="/javascripts/widgets/Geocoding.js"></script>
+    <script src="/javascripts/widgets/geocoding/Location.js"></script>
 </head>
 <body>
+
+<div id="geocodingContent">
+    <div class="unsorted">
+        <div class="origin">
+            <div>Origin</div>
+            <div class="addresses">
+                <div class="address">Origin Address</div>
+            </div>
+        </div>
+
+        <div class="destinations">
+            <div>Destinations</div>
+            <div class="addresses">
+                <div class="address">Destination Address 1</div>
+                <div class="address">Destination Address 2</div>
+                <div class="address">Destination Address 3</div>
+                <div class="address">Destination Address 4</div>
+                <div class="address">Destination Address 5</div>
+                <div class="address">Destination Address 6</div>
+            </div>
+        </div>
+    </div>
+    <div class="sortButton">
+        <button>Order Destinations By Distance</button>
+    </div>
+    <div class="sorted">
+        <div class="origin"></div>
+        <div class="destinations">
+            <div>Destinations</div>
+            <div class="addresses">
+                <div class="address">Destination Address 1</div>
+                <div class="address">Destination Address 2</div>
+                <div class="address">Destination Address 3</div>
+                <div class="address">Destination Address 4</div>
+                <div class="address">Destination Address 5</div>
+                <div class="address">Destination Address 6</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>

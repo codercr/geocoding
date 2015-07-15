@@ -4,14 +4,14 @@ describe("Geocoding", function () {
 
     beforeEach(function(){
         gencodeSpy = spyOn(Geocoding.geocoder, "geocode").and.callFake(function (query, callback) {
-            callback.apply(this, GoogleMapsHelper.responses[query.address])
+            callback.apply(this, GoogleMapsHelper.responses[query.address]);
         });
     });
 
     describe(".geocoder", function () {
         it("returns an instance of google.maps.Geocoder", function() {
             expect(typeof Geocoding.geocoder).toEqual("object");
-            expect(Geocoding.geocoder instanceof google.maps.Geocoder).toBeTruthy()
+            expect(Geocoding.geocoder instanceof google.maps.Geocoder).toBeTruthy();
         });
     });
 
@@ -24,7 +24,7 @@ describe("Geocoding", function () {
             expect(expectFunc).not.toThrowError();
         });
 
-        describe("param origins", function () {
+        describe("param origin", function () {
             it("throw exception when origin is not a string", function () {
                 var expectFunc = function () {
                     new Geocoding(["origins"], ["destinations"]);

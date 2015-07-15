@@ -5,6 +5,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places&libraries=geometry&v=3.exp"></script>
     <script src="/javascripts/widgets/Geocoding.js"></script>
     <script src="/javascripts/widgets/geocoding/Location.js"></script>
+    <script src="/javascripts/views/GeocodingView.js"></script>
 </head>
 <body>
 
@@ -12,21 +13,12 @@
     <div class="unsorted">
         <div class="origin">
             <div>Origin</div>
-            <div class="addresses">
-                <div class="address">Origin Address</div>
-            </div>
+            <div class="addresses"></div>
         </div>
 
         <div class="destinations">
             <div>Destinations</div>
-            <div class="addresses">
-                <div class="address">Destination Address 1</div>
-                <div class="address">Destination Address 2</div>
-                <div class="address">Destination Address 3</div>
-                <div class="address">Destination Address 4</div>
-                <div class="address">Destination Address 5</div>
-                <div class="address">Destination Address 6</div>
-            </div>
+            <div class="addresses"></div>
         </div>
     </div>
     <div class="sortButton">
@@ -36,18 +28,24 @@
         <div class="origin"></div>
         <div class="destinations">
             <div>Destinations</div>
-            <div class="addresses">
-                <div class="address">Destination Address 1</div>
-                <div class="address">Destination Address 2</div>
-                <div class="address">Destination Address 3</div>
-                <div class="address">Destination Address 4</div>
-                <div class="address">Destination Address 5</div>
-                <div class="address">Destination Address 6</div>
-            </div>
+            <div class="addresses"></div>
         </div>
     </div>
 </div>
 
+<script>
+    var attachPoint = document.querySelector("#geocodingContent"),
+        origin = "510 Victoria, Venice, CA",
+        destinations = [
+            "Times Square, Manhattan, NY 10036",
+            "13000 S Dakota 244, Keystone, SD 57751",
+            "1600 Pennsylvania Ave NW, Washington, DC 20500",
+            "Golden Gate Bridge, San Francisco, CA 94129",
+            "Stonehenge, A344, Amesbury, Wiltshire SP4 7DE, United Kingdom",
+            "Great Wall of China",
+            "Hollywood Sign, Los Angeles, CA"
+        ], geocodingView = new GeocodingView(attachPoint, origin, destinations);
+</script>
 
 </body>
 </html>

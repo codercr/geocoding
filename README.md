@@ -43,3 +43,14 @@ rake jasmine
 ```
 http://localhost:8888/
 ```
+
+## Run server
+1. start jasmine server
+```bash
+scripts/server.sh
+```
+
+2. open web browser
+```
+http://localhost:3000/
+```
